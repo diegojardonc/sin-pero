@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 import './Navigation.css';
 
@@ -9,6 +10,7 @@ import './Navigation.css';
 structure
 
 .navigation
+    .show-menu
     .menu
         .menu-item
     .logo
@@ -47,20 +49,20 @@ export default class Navigation extends Component {
             <React.Fragment>
             <div className="navigation">
                 <a className="navigation__logo" href="#!" onClick={this.toggleMenu}>
-                    <i class="material-icons" style={{fontSize: '36px'}}>menu</i>
+                    <i className="material-icons" style={{fontSize: '36px'}}>menu</i>
                 </a>
-                <a href="/">
+                <Link to="/">
                     <img src="http://placehold.it/36" className="navigation__logo"/>
-                </a>
+                </Link>
                 <div className="user-menu">
                     <img src="http://placehold.it/36" className="user-menu__profile-picture"/>
                     <a className="user-menu__toggle-menu" onClick={this.toggleUserMenu}>
-                        <i class="material-icons">arrow_drop_down</i>
+                        <i className="material-icons">arrow_drop_down</i>
                     </a>
                     {(this.state.isUserMenuHidden) ? null : (<div className="user-menu__menu">
-                        <a className="user-menu__menu__item" href="#!">Perfil</a>
-                        <a className="user-menu__menu__item" href="#!">Mis favoritos</a>
-                        <a className="user-menu__menu__item" href="#!">Cerrar sesión</a>
+                        <NavLink onClick={this.toggleUserMenu} activeStyle={{textDecoration: 'underline'}} className="user-menu__menu__item" to="/">Perfil</NavLink>
+                        <NavLink onClick={this.toggleUserMenu} activeStyle={{textDecoration: 'underline'}} className="user-menu__menu__item" to="/mis-favoritos">Mis favoritos</NavLink>
+                        <NavLink onClick={this.toggleUserMenu} activeStyle={{textDecoration: 'underline'}} className="user-menu__menu__item" to="/">Cerrar sesión</NavLink>
                     </div>)}
                 </div>
             </div>
@@ -68,9 +70,9 @@ export default class Navigation extends Component {
                 (this.state.isMenuHidden) ? null :
                 (
                     <div className="vertical-menu">
-                        <a href="#!" className="vertical-menu__item">Inicio</a>
-                        <a href="#!" className="vertical-menu__item">Explorar</a>
-                        <a href="#!" className="vertical-menu__item">Preferencias</a>
+                        <NavLink onClick={this.toggleMenu} activeStyle={{textDecoration: 'underline'}} to="/" className="vertical-menu__item">Inicio</NavLink>
+                        <NavLink onClick={this.toggleMenu} activeStyle={{textDecoration: 'underline'}} to="/explorar" className="vertical-menu__item">Explorar</NavLink>
+                        <NavLink onClick={this.toggleMenu} activeStyle={{textDecoration: 'underline'}} to="/" className="vertical-menu__item">Preferencias</NavLink>
                     </div>
                 )
             }
