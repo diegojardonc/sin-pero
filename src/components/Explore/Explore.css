@@ -1,0 +1,91 @@
+.explore {
+    padding: 0 1.5rem;
+}
+
+.explore__filters-title {
+    color: white;
+
+    border-radius: 4px;
+
+    background-color: #FF6C2F;
+    text-align: center;
+    padding: 0.5rem 1rem;
+
+    margin: 0.75rem 0;
+}
+
+.explore__search-form {
+    display: flex;
+}
+
+.explore__search__name::placeholder {
+    color: #FF6C2F;
+}
+
+.explore__search__name {
+    color: #FF6C2F;
+    font-weight: bold;
+
+    width: 100%;
+
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #FF6C2F;
+    margin-right: 0.5rem;
+}
+
+.explore__search__submit {
+    padding: 0.5rem;
+    background-color: #FF6C2F;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+.explore__filters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.explore__filters__filter {
+    font-weight: bold;
+}
+
+.explore__filters__filter input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #FF6C2F;
+    color: #FF6C2F;
+    margin: 0.75rem 0;
+    width: 100%;
+}
+
+.explore__filters__filter input::placeholder {
+    color: #FF6C2F;
+}
+
+.explore__grid-view:last-child {
+    margin: 0;
+}
+
+@media only screen and (min-width: 720px) {
+    .explore__search__submit {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .explore__grid-view {
+        margin-top: 2rem;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .explore__filters {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+}

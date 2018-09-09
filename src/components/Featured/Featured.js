@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import ImageGallery from 'react-image-gallery';
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
+import { Link } from 'react-router-dom';
 import './Featured.css';
 import 'react-image-gallery/styles/css/image-gallery.css';
 
@@ -72,6 +73,7 @@ export default class Featured extends Component {
                     <p className="featured__info__description">Ea ad tempor cillum culpa magna dolor aliquip in quis nostrud excepteur mollit proident adipisicing. Veniam nulla labore eu labore fugiat non. Occaecat enim ea est ex quis dolore occaecat est. Reprehenderit ex sunt aliquip veniam cupidatat officia consequat ut. Anim occaecat ullamco aliquip cupidatat est pariatur. Tempor do incididunt reprehenderit magna excepteur labore officia irure nisi exercitation.</p>
                     <span><b>Teléfono:</b> 551 555 55 55</span> <br/>
                     <span><b>Ubicación</b> Elit dolor ex ipsum officia officia veniam irure sunt dolore sit cupidatat.</span>
+                    <Link to="/explorar/todos" className="featured__all">Ver todos</Link>
                 </div>
             </div>
         );

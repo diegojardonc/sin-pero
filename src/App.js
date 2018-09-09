@@ -5,6 +5,7 @@ import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Explore from './components/Explore/Explore';
+import PlaceView from './components/PlaceView/PlaceView';
 
 import './index.css';
 
@@ -16,6 +17,9 @@ class App extends Component {
           <Navigation />
           <Route path='/' component={Home} exact/>
           <Route path='/explorar' component={Explore}/>
+          <Route path='/lugar/:id' render={({match}) => (
+              <PlaceView id={Number.parseInt(match.params.id)} />
+          )}/>
           <Footer />
         </React.Fragment>
       </Router>

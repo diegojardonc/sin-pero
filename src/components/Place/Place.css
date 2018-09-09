@@ -1,0 +1,22 @@
+.place {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.place__caption {
+    color: white;
+    padding-left: 1rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.25;
+    height: 100%;
+    width: 100%;
+}
+
+.place__img {
+    width: 100%;
+    margin: 0;
+}
