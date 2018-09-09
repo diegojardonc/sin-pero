@@ -1,0 +1,57 @@
+.featured {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #FF6C2F;
+}
+
+.featured__info {
+    display: none;
+}
+
+.react-tabs__tab-list {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.react-tabs__tab {
+    color: #FF6C2F;
+
+    list-style-type: none;
+    padding: 1rem;
+
+    width: 33%;
+    text-align: center;
+
+    border-radius: 4px;
+}
+
+.react-tabs__tab--selected {
+    background-color: #FF6C2F;
+    color: white;
+}
+
+.featured__category__title {
+    text-align: center;
+}
+
+@media only screen and (min-width: 720px) {
+    .featured {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2rem;
+    }
+
+    .featured__title {
+        grid-column: 1 / 3;
+    }
+    
+    .featured .react-tabs {
+        grid-column: 1 / 3;
+    }
+
+    .featured__info {
+        margin-top: 8rem;
+        display: initial;
+    }
+}

@@ -3,6 +3,10 @@
 
     background-color: var(--main-color);
 
+    position: fixed;
+    top: 0;
+    left: 0;
+
     display: flex;
     flex-wrap: wrap;
 
@@ -10,7 +14,9 @@
     align-items: center;
     padding: 0.5rem 1rem;
 
-    position: relative;
+    width: 100%;
+
+    z-index: 1000;
 }
 
 .vertical-menu {
@@ -49,7 +55,9 @@
     position: absolute;
     top: 4rem;
     right: 0;
-    width: 8rem;
+    width: 100%;
+
+    padding: 1rem 0;
 
     display: flex;
     flex-direction: column;
@@ -58,7 +66,12 @@
 
 .user-menu__menu__item {
     color: var(--main-color);
+    text-decoration: none;
     padding: 0.5rem 0;
+}
+
+.user-menu__menu__item:hover {
+    text-decoration: underline;
 }
 
 .user-menu__toggle-menu {

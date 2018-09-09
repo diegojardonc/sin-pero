@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import './TopPicks.css';
 
 export default class TopPicks extends Component {
     constructor (props) {
@@ -43,8 +44,8 @@ export default class TopPicks extends Component {
     render () {
         return (
             <div className="top-picks">
-                <h1 className="top-picks__title">Lo más popular</h1>
-                <ImageGallery items={this.state.places}/>
+                <h2 className="top-picks__title">Lo más popular</h2>
+                <ImageGallery items={this.state.places} autoPlay/>
             </div>
         );
     }

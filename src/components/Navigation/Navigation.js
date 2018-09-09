@@ -60,9 +60,9 @@ export default class Navigation extends Component {
                         <i className="material-icons">arrow_drop_down</i>
                     </a>
                     {(this.state.isUserMenuHidden) ? null : (<div className="user-menu__menu">
-                        <NavLink onClick={this.toggleUserMenu} activeStyle={{textDecoration: 'underline'}} className="user-menu__menu__item" to="/">Perfil</NavLink>
-                        <NavLink onClick={this.toggleUserMenu} activeStyle={{textDecoration: 'underline'}} className="user-menu__menu__item" to="/mis-favoritos">Mis favoritos</NavLink>
-                        <NavLink onClick={this.toggleUserMenu} activeStyle={{textDecoration: 'underline'}} className="user-menu__menu__item" to="/">Cerrar sesión</NavLink>
+                        <Link onClick={this.toggleUserMenu} className="user-menu__menu__item" to="/">Perfil</Link>
+                        <Link onClick={this.toggleUserMenu} className="user-menu__menu__item" to="/mis-favoritos">Mis favoritos</Link>
+                        <Link onClick={this.toggleUserMenu} className="user-menu__menu__item" to="/">Cerrar sesión</Link>
                     </div>)}
                 </div>
             </div>

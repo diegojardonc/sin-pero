@@ -1,0 +1,36 @@
+.quick-access {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #FF6C2F;
+}
+
+.quick-access__title {
+    text-align: center;
+}
+
+.quick-access__links {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.quick-access__item {
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    background-color: #FF6C2F;
+    padding: 1rem;
+}
+
+.quick-access__item:hover {
+    text-decoration: underline;
+}
+
+.quick-access__item:first-child {
+    margin-right: 0.5rem;
+}
+
+@media only screen and (min-width: 720px) {
+    .quick-access__item:first-child {
+        margin-right: 1rem;
+    }
+}
