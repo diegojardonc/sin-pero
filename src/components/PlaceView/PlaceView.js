@@ -38,7 +38,7 @@ export default class PlaceView extends React.Component {
                 {(!this.state.place) ? 'Loading...' : (
                     <div className="place-view">
                         <h2 className="place-view__name">{this.state.place.nombre}</h2>
-                        <img src={this.state.place.original}/>
+                        <img style={{width: '100%'}} src={this.state.place.original}/>
                         <p className="place-view__promo">{this.state.place.promocion}</p>
                         <div className="place-view__contact">
                             <span>{this.state.place.phone}</span>

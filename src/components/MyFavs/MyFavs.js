@@ -26,18 +26,18 @@ export default class MyFavs extends React.Component {
                     color: 'black'
                 }
             }>
-                <Place id={place.id}/>
+                <Place id={place.id} style={{cursor: 'pointer'}}/>
                 <h3>{place.nombre}</h3>
             </Link>
         ));
     
         return (
-            <React.Fragment>
+            <div style={{padding: '0 1.5rem'}}>
                 <h1>Mis favoritos</h1>
                 <div className="my-favs">
                     {places}
                 </div>
-            </React.Fragment>
+            </div>
         );
     }
 }
