@@ -52,10 +52,10 @@ export default class Navigation extends Component {
                     <i className="material-icons" style={{fontSize: '36px'}}>menu</i>
                 </a>
                 <Link to="/">
-                    <img src="http://placehold.it/36" className="navigation__logo"/>
+                    <img alt="Logo small" src="http://placehold.it/36" className="navigation__logo"/>
                 </Link>
                 <div className="user-menu">
-                    <img src="http://placehold.it/36" className="user-menu__profile-picture"/>
+                    <img alt="Profile Picture" src="http://placehold.it/36" className="user-menu__profile-picture"/>
                     <a className="user-menu__toggle-menu" onClick={this.toggleUserMenu}>
                         <i className="material-icons">arrow_drop_down</i>
                     </a>

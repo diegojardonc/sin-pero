@@ -1,0 +1,44 @@
+.place-view {
+    padding: 0 1.5rem;
+}
+
+.place-view__location {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.place-view__like {
+    background-color: white;
+    color: #FF6C2F;
+
+    font-size: 1.5rem;
+
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    border: none; 
+}
+
+.place-view__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.place-view__report {
+    background-color: #fff;
+    border: 1px solid #FF6C2F;
+    border-radius: 0.25rem;
+
+    padding: 0.5rem 1rem;
+    color: #FF6C2F;
+}
+
+@media only screen and (min-width: 720px) {
+    .place-view__location {
+        width:50%;
+        position: relative;
+        left: 25%;
+        margin: 2rem 0;
+    }
+}
