@@ -47,15 +47,21 @@ export default class Featured extends Component {
                     </TabList>
                     <TabPanel>
                         <h2 className="featured__category__title">Restaurantes</h2>
-                        <ImageGallery autoPlay slideInterval={5000} items={this.state.places} showThumbnails={false}/>
+                        <Link to="/lugar/1">
+                            <ImageGallery autoPlay slideInterval={5000} items={this.state.places} showThumbnails={false}/>
+                        </Link>
                     </TabPanel>
                     <TabPanel>
                         <h2 className="featured__category__title">Bares</h2>
-                        <ImageGallery autoPlay slideInterval={5000} items={this.state.places} showThumbnails={false}/>
+                        <Link to="/lugar/1">
+                            <ImageGallery autoPlay slideInterval={5000} items={this.state.places} showThumbnails={false}/>
+                        </Link>
                     </TabPanel>
                     <TabPanel>
                         <h2 className="featured__category__title">Actividades</h2>
-                        <ImageGallery autoPlay slideInterval={5000} items={this.state.places} showThumbnails={false}/>
+                        <Link to="/lugar/1">
+                            <ImageGallery autoPlay slideInterval={5000} items={this.state.places} showThumbnails={false}/>
+                        </Link>
                     </TabPanel>
                 </Tabs>
                 <div className="featured__info">

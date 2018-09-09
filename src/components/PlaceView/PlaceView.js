@@ -29,6 +29,7 @@ export default class PlaceView extends React.Component {
 
     componentDidMount () {
         this.fetchPlaces();
+        window.scrollTo(0, 0);
     }
 
     render () {

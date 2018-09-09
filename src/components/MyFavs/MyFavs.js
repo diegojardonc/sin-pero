@@ -14,6 +14,10 @@ export default class MyFavs extends React.Component {
         this.places = places.slice(0, 3);
     }
 
+    componentDidMount () {
+        window.scrollTo(0, 0);
+    }
+
     render () {
         const places = this.places.map(place => (
             <Link to={'/lugar/'+place.id} style={
