@@ -33,12 +33,18 @@ export default class Navigation extends Component {
     }
 
     toggleMenu () {
+        /* if (!this.isUserMenuHidden)
+            this.toggleUserMenu();
+ */
         this.setState(prevState => ({
             isMenuHidden: !prevState.isMenuHidden
         }));
     }
 
     toggleUserMenu () {
+        /* if (!this.state.isMenuHidden)
+            this.toggleMenu(); */
+
         this.setState(prevState => ({
             isUserMenuHidden: !prevState.isUserMenuHidden
         }));

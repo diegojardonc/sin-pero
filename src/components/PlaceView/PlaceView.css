@@ -1,5 +1,11 @@
 .place-view {
     padding: 0 1.5rem;
+    text-align: center;
+}
+
+.place-view__name {
+    width: 100%;
+    text-align: center;
 }
 
 .place-view__location {
@@ -37,8 +43,6 @@
 @media only screen and (min-width: 720px) {
     .place-view__location {
         width:50%;
-        position: relative;
-        left: 25%;
         margin: 2rem 0;
     }
 }

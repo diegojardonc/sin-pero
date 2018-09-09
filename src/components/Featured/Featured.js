@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import './Featured.css';
 import 'react-image-gallery/styles/css/image-gallery.css';
 
+import { places } from '../../dummy';
+
 export default class Featured extends Component {
     constructor (props) {
         super(props);
@@ -14,27 +16,15 @@ export default class Featured extends Component {
             places: [] 
         }
 
+        this.places = places;
+
         this.fetchPlaces = this.fetchPlaces.bind(this);
     }
 
     fetchPlaces () {
-        const places = [
-            {
-                original: 'http://placehold.it/640/480',
-                thumbnail: 'http://placehold.it/64/48',
-                description: 'lorem'
-            },
-            {
-                original: 'http://placehold.it/640/480',
-                thumbnail: 'http://placehold.it/64/48',
-                description: 'lorem'
-            },
-            {
-                original: 'http://placehold.it/640/480',
-                thumbnail: 'http://placehold.it/64/48',
-                description: 'lorem'
-            }
-        ];
+        const places = this.places;
+
+        console.log(places[0].original);
 
         this.setState({
             places

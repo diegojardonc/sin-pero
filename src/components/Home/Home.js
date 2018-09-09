@@ -7,13 +7,23 @@ import QuickAccess from '../QuickAccess/QuickAccess'
 
 import './Home.css';
 
-export default function Home () {
-    return (
-        <div className="home">
-            <Featured />
-            <QuickAccess />
-            <TopPicks />
-            <About />
-        </div>
-    );
+export default class Home extends React.Component {
+    constructor (props) {
+        super(props);
+    }
+
+    componentDidMount () {
+        window.scrollTo(0, 0);
+    }
+
+    render () {
+        return (
+            <div className="home">
+                <Featured/>
+                <QuickAccess />
+                <TopPicks />
+                <About />
+            </div>
+        );
+    }
 }

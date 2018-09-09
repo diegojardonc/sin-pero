@@ -5,9 +5,14 @@ import Place from '../Place/Place';
 import { Link } from 'react-router-dom';
 import './Explore.css';
 
+import {places} from '../../dummy';
+
 export default class Explore extends Component {
+
     constructor (props) {
         super(props);
+
+        this.places = places;
 
         this.state = {
             isHiddenFilters: true,
@@ -21,75 +26,9 @@ export default class Explore extends Component {
     }
 
     fetchPlaces () {
-        const places = [
-            {
-                id: 1,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 2,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 3,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 4,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 5,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 6,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 7,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 8,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 9,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            }
-        ];
-
         this.setState({
-            places
-        });
+            places: this.places
+        })
     }
 
     toggleFilters () {
@@ -99,6 +38,7 @@ export default class Explore extends Component {
     }
 
     componentDidMount () {
+        window.scrollTo(0, 0);
         this.fetchPlaces();
     }
 
@@ -118,11 +58,11 @@ export default class Explore extends Component {
                 <form className="explore__search-form" onSubmit={(e) => {e.preventDefault()}}>
                     <input type="text" placeholder="¿Buscas algo?" className="explore__search__name" name="name"/>
                     <button className="explore__search__submit">
-                        <i class="fas fa-search"></i>
+                        <i className="fas fa-search"></i>
                     </button>
                 </form>
                 <h4 className="explore__filters-title" onClick={this.toggleFilters}>
-                    Filtros {(this.state.isHiddenFilters) ? (<i class="fas fa-plus"></i>) : (<i class="fas fa-minus"></i>)}
+                    Filtros {(this.state.isHiddenFilters) ? (<i className="fas fa-plus"></i>) : (<i className="fas fa-minus"></i>)}
                 </h4>
                 {
                     (this.state.isHiddenFilters) ? null : (

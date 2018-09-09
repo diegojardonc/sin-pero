@@ -2,6 +2,8 @@ import React from 'react';
 
 import './Place.css';
 
+import {places} from '../../dummy';
+
 export default class Place extends React.Component {
     constructor (props) {
         super(props);
@@ -9,74 +11,13 @@ export default class Place extends React.Component {
         this.state = {
             place: null
         }
+
+        this.places = places;
     }
 
+
     componentDidMount () {
-        const places = [
-            {
-                id: 1,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 2,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 3,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 4,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 5,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 6,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 7,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 8,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            },
-            {
-                id: 9,
-                name:'jaja',
-                url: 'http://placehold.it/640x480',
-                description: 'lorem',
-                promo:'jajajaj'
-            }
-        ];
+        const places = this.places;
 
         this.setState({
             place: places.find(place => place.id === Number.parseInt(this.props.id))
@@ -87,7 +28,7 @@ export default class Place extends React.Component {
         return (
             (!this.state.place) ? (<h2>Loading...</h2>) : (
                 <div className="place">
-                    <img src={this.state.place.url} alt={this.state.place.name} className="place__img"/>
+                    <img src={this.state.place.original} alt={this.state.place.name} className="place__img"/>
                     <div className="place__caption">
                         <h2 className="place__title">{this.state.place.name}</h2>
                         <p className="place__promo">{this.state.place.promo}</p>
