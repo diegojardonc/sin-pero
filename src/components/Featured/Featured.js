@@ -13,12 +13,19 @@ export default class Featured extends Component {
         super(props);
 
         this.state = {
-            places: [] 
+            places: [],
+            currentIndex: 1
         }
 
         this.places = places;
 
         this.fetchPlaces = this.fetchPlaces.bind(this);
+    }
+
+    onChangeSlide (index) {
+        this.setState({
+            currentIndex: index+1
+        })
     }
 
     fetchPlaces () {
@@ -47,21 +54,51 @@ export default class Featured extends Component {
                     </TabList>
                     <TabPanel>
                         <h2 className="featured__category__title">Restaurantes</h2>
-                        <Link to="/lugar/1">
-                            <ImageGallery autoPlay slideInterval={5000} items={this.state.places} showThumbnails={false}/>
-                        </Link>
+                        <ImageGallery
+                            autoPlay 
+                            slideInterval={5000} 
+                            items={this.state.places} 
+                            showThumbnails={false}
+                            onSlide={(index) => {
+                                this.onChangeSlide(index);
+                            }}
+                            onClick={
+                                () => {
+                                   window.location.href = '/lugar/'+this.state.currentIndex 
+                                }
+                            }/>
                     </TabPanel>
                     <TabPanel>
                         <h2 className="featured__category__title">Bares</h2>
-                        <Link to="/lugar/1">
-                            <ImageGallery autoPlay slideInterval={5000} items={this.state.places} showThumbnails={false}/>
-                        </Link>
+                        <ImageGallery 
+                            autoPlay 
+                            slideInterval={5000} 
+                            items={this.state.places} 
+                            showThumbnails={false} 
+                            onSlide={(index) => {
+                                this.onChangeSlide(index);
+                            }}
+                            onClick={
+                                () => {
+                                   window.location.href = '/lugar/'+this.state.currentIndex 
+                                }
+                            }/>
                     </TabPanel>
                     <TabPanel>
                         <h2 className="featured__category__title">Actividades</h2>
-                        <Link to="/lugar/1">
-                            <ImageGallery autoPlay slideInterval={5000} items={this.state.places} showThumbnails={false}/>
-                        </Link>
+                        <ImageGallery 
+                            autoPlay 
+                            slideInterval={5000} 
+                            items={this.state.places} 
+                            showThumbnails={false} 
+                            onSlide={(index) => {
+                                this.onChangeSlide(index);
+                            }}
+                            onClick={
+                                () => {
+                                   window.location.href = '/lugar/'+this.state.currentIndex 
+                                }
+                            }/>
                     </TabPanel>
                 </Tabs>
                 <div className="featured__info">
